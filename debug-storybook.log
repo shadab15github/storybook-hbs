@@ -1,0 +1,18 @@
+[11:39:32.844] [INFO] [36mInitializing Storybook[39m
+[11:39:33.268] [DEBUG] Getting package.json info for G:/StoryBook/storybook-hbs/package.json...
+[11:39:33.269] [DEBUG] Getting CLI versions from NPM for storybook...
+[11:39:33.269] [DEBUG] Executing command: npm info storybook version
+[11:39:34.796] [INFO] Adding Storybook version 10.2.0 to your project
+[11:39:34.797] [INFO] Installing Storybook for user specified project type: html
+[11:39:34.800] [DEBUG] Using cached package.json for G:\StoryBook\storybook-hbs\package.json...
+[11:39:39.755] [PROMPT] We were not able to detect the right builder for your project. Please select one: {"choice":"webpack5"}
+[11:39:39.756] [ERROR] [38;2;241;97;97mError: Could not find framework for renderer: html and builder: webpack5[39m
+    at FrameworkDetectionService.detectFramework (file:///C:/Users/shada/AppData/Local/npm-cache/_npx/fd14e96670b26896/node_modules/create-storybook/dist/_node-chunks/chunk-UKMQREIT.js:888:11)
+    at FrameworkDetectionCommand.execute (file:///C:/Users/shada/AppData/Local/npm-cache/_npx/fd14e96670b26896/node_modules/create-storybook/dist/_node-chunks/chunk-UKMQREIT.js:920:204)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async doInitiate (file:///C:/Users/shada/AppData/Local/npm-cache/_npx/fd14e96670b26896/node_modules/create-storybook/dist/_node-chunks/chunk-UKMQREIT.js:2269:234)
+    at async file:///C:/Users/shada/AppData/Local/npm-cache/_npx/fd14e96670b26896/node_modules/create-storybook/dist/_node-chunks/chunk-UKMQREIT.js:2322:20
+    at async withTelemetry (file:///C:/Users/shada/AppData/Local/npm-cache/_npx/fd14e96670b26896/node_modules/storybook/dist/_node-chunks/chunk-5T2PCIM6.js:218:12)
+    at async initiate (file:///C:/Users/shada/AppData/Local/npm-cache/_npx/fd14e96670b26896/node_modules/create-storybook/dist/_node-chunks/chunk-UKMQREIT.js:2315:24)
+    at async _Command.<anonymous> (file:///C:/Users/shada/AppData/Local/npm-cache/_npx/fd14e96670b26896/node_modules/create-storybook/dist/_node-chunks/run-LNSO6ZTX.js:2683:144)
+[11:39:39.765] [INFO] Storybook collects completely anonymous usage telemetry. We use it to shape Storybook's roadmap and prioritize features. You can learn more, including how to opt out, at https://storybook.js.org/telemetry
