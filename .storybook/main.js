@@ -1,6 +1,6 @@
 module.exports = {
   stories: ["../src/**/*.stories.js"],
-  addons: ["@storybook/addon-essentials"],
+  addons: ["@storybook/addon-essentials", "@whitespace/storybook-addon-html"],
 
   framework: {
     name: "@storybook/html-webpack5",

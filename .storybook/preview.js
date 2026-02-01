@@ -1,3 +1,10 @@
 export const parameters = {
-  layout: "centered",
+  // layout: "centered",
+  html: {
+    prettier: true,
+    highlighter: {
+      showLineNumbers: true,
+      wrapLines: true,
+    },
+  },
 };
