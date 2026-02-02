@@ -12,7 +12,6 @@ const transformData = (data) => {
       const productKey = product.id;
       return spec.values[productKey] || null;
     });
-
     return {
       ...spec,
       productValues,

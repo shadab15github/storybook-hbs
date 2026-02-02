@@ -49,7 +49,7 @@
           {{#each productValues}}
             <div class="compare-product__cell compare-product__cell--value">
               {{#if this}}
-                {{#if isBoolean}}
+                {{#if ../isBoolean}}
                   {{#if this.value}}
                     <span
                       class="compare-product__spec-value compare-product__spec-value--check"
