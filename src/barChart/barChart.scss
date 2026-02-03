@@ -1,0 +1,200 @@
+.bar-chart {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  width: 100%;
+  max-width: 600px;
+  background: #f7f7f7;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #ebebeb;
+
+  &__header {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #252525;
+    margin: 0 0 4px 0;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    color: #8e8e8e;
+    margin: 0;
+  }
+
+  &__container {
+    display: flex;
+    gap: 12px;
+    position: relative;
+  }
+
+  &__y-axis {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    min-width: 40px;
+  }
+
+  &__y-label {
+    font-size: 12px;
+    color: #8e8e8e;
+    text-align: right;
+    line-height: 1;
+  }
+
+  &__content {
+    flex: 1;
+    position: relative;
+    min-height: 300px;
+  }
+
+  &__grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 24px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+  &__grid-line {
+    width: 100%;
+    height: 1px;
+    background-color: #ebebeb;
+  }
+
+  &__bars {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    height: 100%;
+    padding-bottom: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__bar-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    position: relative;
+  }
+
+  &__bar {
+    width: 100%;
+    background-color: #343434;
+    border-radius: 6px 6px 0 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    animation: barGrow 0.6s ease-out;
+    transform-origin: bottom;
+    min-height: 0;
+
+    &:hover {
+      opacity: 0.8;
+      transform: translateY(-2px);
+
+      .bar-chart__tooltip {
+        opacity: 1;
+        transform: translateY(-8px);
+      }
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    background-color: #252525;
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.2s ease;
+    pointer-events: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 4px solid #252525;
+    }
+  }
+
+  &__x-label {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #8e8e8e;
+    text-align: center;
+  }
+
+  @keyframes barGrow {
+    from {
+      height: 0 !important;
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  // Responsive design
+  @media (max-width: 480px) {
+    &__bars {
+      gap: 8px;
+    }
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__subtitle {
+      font-size: 13px;
+    }
+  }
+}
+
+// Color variants
+.bar-chart {
+  &--primary .bar-chart__bar {
+    background-color: #343434;
+  }
+
+  &--secondary .bar-chart__bar {
+    background-color: #f7f7f7;
+  }
+
+  &--accent .bar-chart__bar {
+    background-color: #343434;
+  }
+
+  &--destructive .bar-chart__bar {
+    background-color: #dc2626;
+  }
+
+  &--muted .bar-chart__bar {
+    background-color: #8e8e8e;
+  }
+}

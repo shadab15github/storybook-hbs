@@ -1,0 +1,41 @@
+<div class="bar-chart">
+  {{#if title}}
+    <div class="bar-chart__header">
+      <h3 class="bar-chart__title">{{title}}</h3>
+      {{#if subtitle}}
+        <p class="bar-chart__subtitle">{{subtitle}}</p>
+      {{/if}}
+    </div>
+  {{/if}}
+
+  <div class="bar-chart__container">
+    <div class="bar-chart__y-axis">
+      {{#each yAxisLabels}}
+        <span class="bar-chart__y-label">{{this}}</span>
+      {{/each}}
+    </div>
+
+    <div class="bar-chart__content">
+      <div class="bar-chart__grid">
+        {{#each yAxisLabels}}
+          <div class="bar-chart__grid-line"></div>
+        {{/each}}
+      </div>
+
+      <div class="bar-chart__bars">
+        {{#each data}}
+          <div class="bar-chart__bar-wrapper">
+            <div
+              class="bar-chart__bar"
+              data-value="{{value}}"
+              style="height: {{percentage}}%;"
+            >
+              <span class="bar-chart__tooltip">{{value}}</span>
+            </div>
+            <span class="bar-chart__x-label">{{label}}</span>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
