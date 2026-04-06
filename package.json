@@ -19,11 +19,11 @@
     "@storybook/preview-api": "^8.6.14",
     "@whitespace/storybook-addon-html": "^7.0.0",
     "css-loader": "^7.1.2",
-    "handlebars": "^4.7.8",
+    "handlebars": "^4.7.8.1",
     "handlebars-loader": "^1.7.3",
     "sass": "^1.97.3",
     "sass-loader": "^16.0.6",
-    "storybook": "^8.6.15",
+    "storybook": "^8.6.15.1",
     "style-loader": "^4.0.0"
   }
 }
